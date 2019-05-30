@@ -1,0 +1,35 @@
+#include<stdio.h>
+int T(int a);
+int main()
+{
+    int a,q;
+    printf("please input a number:\n");
+    scanf("%d",&a);
+    q=T(a);
+    if(q==0)
+    {
+        printf("yes,it is\n");
+    }
+    else
+    {
+        if(q==1)
+        {
+            printf("no,it is't\n");
+        }
+    }
+}
+int T(int a)
+{
+    int i,p;
+    p=0;
+    for (i = 2; i < a; i++)
+    {
+       if(a%i==0)
+       {
+           p=1;
+           break;
+       }
+
+    }
+    return p;
+}
